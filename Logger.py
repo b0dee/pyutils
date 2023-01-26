@@ -1,7 +1,7 @@
 import sys
 class Logger: 
     def __init__(self, filepath = None):
-        self.logfile = filepath == None ? "stdout": filepath;
+        self.logfile = filepath if filepath else "stdout";
 
     def _write_log(self, level, message):
         # Date\t level\t message
